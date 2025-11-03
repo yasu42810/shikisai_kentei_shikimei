@@ -1,0 +1,76 @@
+:root{
+    --bg:white;      /* 背景は白（指定どおり） */
+    --text:#222;
+    --muted:#666;
+    --border:#e5e7eb;
+    --primary:#0f62fe;
+    --primary-weak:#eef3ff;
+    --ok:#16a34a;
+    --ng:#dc2626;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans JP",sans-serif;
+    line-height:1.6;
+  }
+  .container{
+    max-width:880px;
+    margin:24px auto;
+    padding:0 16px;
+  }
+  .header{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;justify-content:space-between;margin-bottom:16px}
+  .header h1{margin:0;font-size:22px}
+  .stats{display:flex;gap:16px;color:var(--muted);font-size:14px}
+  .card{
+    background:#fff;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:16px;
+    box-shadow:0 2px 6px rgba(0,0,0,.03);
+  }
+  .hidden{display:none}
+  .question h2{margin:0 0 8px 0}
+  .question-text{font-size:18px;white-space:pre-wrap}
+  .choices{display:grid;gap:10px;margin:16px 0}
+  .choice{
+    display:flex;align-items:center;gap:10px;
+    padding:10px 12px;border:1px solid var(--border);border-radius:10px;
+  }
+  .choice input{transform:scale(1.1)}
+  .btn{
+    appearance:none;border:none;border-radius:10px;padding:10px 16px;
+    background:var(--primary);color:#fff;font-weight:600;cursor:pointer;
+  }
+  .btn.secondary{background:var(--primary-weak);color:#1f3a8a}
+  .btn:disabled{opacity:.6;cursor:not-allowed}
+  .result-grid{display:grid;grid-template-columns:140px 1fr;gap:8px 14px}
+  .badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;border:1px solid var(--border);color:var(--muted)}
+  .kv{font-weight:600;color:#111}
+  .colorchip{
+    width:44px;height:44px;border-radius:8px;border:1px solid var(--border);
+  }
+  .correct{color:var(--ok)}
+  .incorrect{color:var(--ng)}
+  .footer{color:var(--muted);text-align:center;margin-top:24px}
+  
+  /* === 解答詳細カード === */
+  .items-wrap{display:grid; gap:12px; margin-top:12px}
+  .item-card{
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:12px;
+    background:#fff;
+  }
+  .item-card.correct-ring{box-shadow:0 0 0 3px rgba(22,163,74,.15)}
+  .item-head{display:flex; align-items:center; gap:10px; margin-bottom:8px}
+  .item-title{font-weight:700; font-size:16px}
+  .item-meta{display:grid; grid-template-columns:120px 1fr; gap:6px 12px; font-size:14px}
+  .item-desc{margin-top:8px; white-space:pre-wrap}
+  .item-chip{display:flex; align-items:center; gap:10px}
+  .item-chip .colorchip{width:28px; height:28px; border-radius:6px}
+  .section-title{margin:12px 0 6px; font-size:15px; font-weight:700}
