@@ -1,5 +1,4 @@
 /* ====== 設定 ====== */
-// そのままのファイル名を使う場合
 const DATA_FILES = [
   'data/3kyu.csv',
   'data/2kyu.csv'
@@ -171,6 +170,7 @@ function makeQuestion(){
   const stem = pick.join('\n');
 
   // 選択肢（正解+ダミー3）
+  const names = ALL_ITEMS.map(x=>x.name);
   const dummies = pickN(names, 3, new Set([item.name]));
   const choices = shuffle([item.name, ...dummies]);
 
